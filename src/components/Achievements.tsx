@@ -12,18 +12,21 @@ const Achievements = () => {
       title: 'Achievement Title 1',
       description: 'Short description of the achievement',
       image: '/prestasi1.jpg',
+      pdf: '/prestasi1.pdf',
     },
     {
       id: 2,
       title: 'Achievement Title 2',
       description: 'Short description of the achievement',
       image: '/prestasi2.jpg',
+      pdf: '/prestasi2.pdf',
     },
     {
       id: 3,
       title: 'Achievement Title 3',
       description: 'Short description of the achievement',
       image: '/prestasi3.jpg',
+      pdf: '/prestasi3.pdf',
     },
   ];
 
@@ -68,6 +71,21 @@ const Achievements = () => {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Milestones and recognitions throughout my journey
           </p>
+          {/*
+            Public-folder PDF link: place your PDF (e.g. prestasi1.pdf) into the project's
+            `public/` folder so it is served at the root: /prestasi1.pdf
+            This anchor will open the PDF in a new tab. Adjust filename as needed.
+          */}
+          <div className="mt-6">
+            <a
+              href="/prestasi1.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-4 py-2 rounded-md bg-primary text-background font-medium hover:opacity-90 transition"
+            >
+              View certificate (PDF)
+            </a>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -106,6 +124,18 @@ const Achievements = () => {
                   <p className="text-muted-foreground text-sm">
                     {achievement.description}
                   </p>
+                  <div className="mt-4 flex gap-3">
+                    {achievement.pdf && (
+                      <a
+                        href={achievement.pdf}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-3 py-1 rounded-md bg-primary text-background text-sm font-medium hover:opacity-90 transition"
+                      >
+                        View PDF
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>
