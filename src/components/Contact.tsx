@@ -16,7 +16,7 @@ const Contact = () => {
     },
     {
       name: 'Discord',
-      icon: MessageSquare,
+      icon: Discord,
       link: 'https://discord.com/users/953277810267545741',
       color: 'hover:text-secondary',
       bgGradient: 'from-purple-500 to-pink-500',
