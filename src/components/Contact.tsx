@@ -16,7 +16,7 @@ const Contact = () => {
     },
     {
       name: 'Discord',
-      icon: Discord,
+      icon: MessageSquare,
       link: 'https://discord.com/users/953277810267545741',
       color: 'hover:text-secondary',
       bgGradient: 'from-purple-500 to-pink-500',
@@ -24,7 +24,7 @@ const Contact = () => {
     {
       name: 'Email',
       icon: Mail,
-      link: 'alfarrezald@gmail.com',
+      link: 'mailto:alfarrezald@gmail.com',
       color: 'hover:text-primary',
       bgGradient: 'from-green-500 to-teal-500',
     },
