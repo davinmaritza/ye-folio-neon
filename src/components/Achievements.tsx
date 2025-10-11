@@ -9,20 +9,20 @@ const Achievements = () => {
   const achievements = [
     {
       id: 1,
-      title: 'Achievement Title 1',
-      description: 'Short description of the achievement',
+      title: 'Olimpiade Sains Seluruh Indonesia Informatika 2025',
+      description: 'Peraih Mendali Emas Predikat A+',
       image: '/prestasi1.jpg',
     },
     {
       id: 2,
-      title: 'Achievement Title 2',
-      description: 'Short description of the achievement',
+      title: 'Nusantara Sains Festival Kedokteran Dasar 2025',
+      description: 'Peraih Mendali Emas Predikat A+',
       image: '/prestasi2.jpg',
     },
     {
       id: 3,
-      title: 'Achievement Title 3',
-      description: 'Short description of the achievement',
+      title: 'Ajang Kompetisi Sains Indonesia Informatika 2025',
+      description: 'Peraih Mendali Perak Predikat A',
       image: '/prestasi3.jpg',
     },
   ];
