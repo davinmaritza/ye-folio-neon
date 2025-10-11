@@ -82,23 +82,31 @@ const Achievements = () => {
               className="group"
             >
               <div className="glass rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300">
-                {/* Image Container */}
-                <div className="relative h-64 bg-muted overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:opacity-0 transition-opacity duration-300" />
-                  <img
-                    src={achievement.image}
-                    alt={achievement.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    onError={(e) => {
-                      // Fallback if image doesn't exist
-                      e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23262626" width="400" height="300"/%3E%3Ctext fill="%234a9eff" font-family="sans-serif" font-size="24" text-anchor="middle" x="200" y="150"%3EAchievement %23' + achievement.id + '%3C/text%3E%3C/svg%3E';
-                    }}
-                  />
-                  
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
+                {/* Image Container (clickable -> opens PDF) */}
+                <a
+                  href={`/prestasi${achievement.id}.pdf`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Open certificate ${achievement.id} (PDF)`}
+                  className="block"
+                >
+                  <div className="relative h-64 bg-muted overflow-hidden cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:opacity-0 transition-opacity duration-300" />
+                    <img
+                      src={achievement.image.replace('.jpg', '.svg')}
+                      alt={achievement.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        // Fallback if image doesn't exist
+                        e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23262626" width="400" height="300"/%3E%3Ctext fill="%234a9eff" font-family="sans-serif" font-size="24" text-anchor="middle" x="200" y="150"%3EAchievement %23' + achievement.id + '%3C/text%3E%3C/svg%3E';
+                      }}
+                    />
+
+                    {/* Overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </a>
 
                 {/* Content */}
                 <div className="p-6">
