@@ -10,7 +10,7 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: Github,
-      link: 'https://github.com/31yve',
+      link: 'https://github.com/davinmaritza',
       color: 'hover:text-primary',
       bgGradient: 'from-blue-500 to-cyan-500',
     },
