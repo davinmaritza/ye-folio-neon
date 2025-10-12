@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Server } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Projects = () => {
@@ -8,10 +8,12 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A modern, full-featured online shopping platform with secure payment integration and real-time inventory management.',
-      tech: ['TypeScript', 'React', 'Node.js'],
+      title: 'Arqonara Website',
+      description: 'Penyedia Kebutuhan Hosting Terpercaya untuk Proyek Anda.',
+      tech: ['Web Hosting', 'Cloud Services', 'VPS'],
       gradient: 'from-blue-500 to-cyan-500',
+      link: 'https://arqonara.com/',
+      icon: 'Server',
     },
     {
       title: 'Social Media Dashboard',
@@ -62,56 +64,86 @@ const Projects = () => {
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="glass rounded-2xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl cursor-pointer"
-                style={{
-                  animationDelay: `${index * 100}ms`,
-                }}
-              >
-                {/* Project Image Placeholder with Gradient */}
-                <div className={`h-48 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="flex gap-4">
-                      <Button 
-                        size="icon"
-                        className="rounded-full bg-white/90 hover:bg-white text-black"
-                      >
-                        <Github size={20} />
-                      </Button>
-                      <Button 
-                        size="icon"
-                        className="rounded-full bg-white/90 hover:bg-white text-black"
-                      >
-                        <ExternalLink size={20} />
-                      </Button>
+            {projects.map((project, index) => {
+              const ProjectWrapper = project.link ? 'a' : 'div';
+              const wrapperProps = project.link 
+                ? { href: project.link, target: '_blank', rel: 'noopener noreferrer' }
+                : {};
+
+              return (
+                <ProjectWrapper
+                  key={index}
+                  {...wrapperProps}
+                  className="glass rounded-2xl overflow-hidden group hover:-translate-y-2 hover:scale-105 transition-all duration-300 hover:shadow-2xl cursor-pointer block"
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                  }}
+                >
+                  {/* Project Image Placeholder with Gradient */}
+                  <div className={`h-48 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+                    
+                    {/* Icon for projects with icon property */}
+                    {project.icon && (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <Server size={40} className="text-white" />
+                        </div>
+                      </div>
+                    )}
+                    
+                    {/* Buttons for projects without link */}
+                    {!project.link && (
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="flex gap-4">
+                          <Button 
+                            size="icon"
+                            className="rounded-full bg-white/90 hover:bg-white text-black"
+                          >
+                            <Github size={20} />
+                          </Button>
+                          <Button 
+                            size="icon"
+                            className="rounded-full bg-white/90 hover:bg-white text-black"
+                          >
+                            <ExternalLink size={20} />
+                          </Button>
+                        </div>
+                      </div>
+                    )}
+                    
+                    {/* External link indicator for linked projects */}
+                    {project.link && (
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center">
+                          <ExternalLink size={20} className="text-black" />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Project Info */}
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-foreground/70 mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 text-sm rounded-full bg-muted text-foreground/80"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                </div>
-
-                {/* Project Info */}
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-foreground/70 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-sm rounded-full bg-muted text-foreground/80"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+                </ProjectWrapper>
+              );
+            })}
           </div>
         </div>
       </div>
