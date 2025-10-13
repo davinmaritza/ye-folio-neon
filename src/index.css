@@ -8,43 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 15% 5%;
-    --foreground: 240 10% 95%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
 
-    --card: 240 12% 8%;
-    --card-foreground: 240 10% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 240 12% 8%;
-    --popover-foreground: 240 10% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 240 15% 5%;
+    --primary: 0 85% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 262 83% 58%;
-    --secondary-foreground: 240 10% 95%;
+    --secondary: 0 70% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 10% 15%;
-    --muted-foreground: 240 5% 60%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 240 10% 95%;
+    --accent: 0 85% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 240 10% 95%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 10% 20%;
-    --input: 240 10% 15%;
-    --ring: 217 91% 60%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 85% 55%;
 
     --radius: 0.75rem;
     
-    /* Custom neon colors */
-    --neon-blue: 217 91% 60%;
-    --neon-purple: 262 83% 58%;
-    --dark-bg: 240 15% 5%;
-    --dark-surface: 240 12% 8%;
-    --glow-blue: 217 91% 60%;
-    --glow-purple: 262 83% 58%;
+    /* Custom colors - Dark Red & Black theme */
+    --neon-red: 0 85% 55%;
+    --dark-red: 0 70% 45%;
+    --darker-red: 0 60% 35%;
+    --dark-bg: 0 0% 5%;
+    --dark-surface: 0 0% 8%;
+    --glow-red: 0 85% 55%;
+    --glow-dark-red: 0 70% 45%;
+    --primary-rgb: 222, 51, 51;
 
     --sidebar-background: 0 0% 98%;
 
@@ -64,33 +66,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 240 15% 5%;
-    --foreground: 240 10% 95%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
 
-    --card: 240 12% 8%;
-    --card-foreground: 240 10% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 240 12% 8%;
-    --popover-foreground: 240 10% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 240 15% 5%;
+    --primary: 0 85% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 262 83% 58%;
-    --secondary-foreground: 240 10% 95%;
+    --secondary: 0 70% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 10% 15%;
-    --muted-foreground: 240 5% 60%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 240 10% 95%;
+    --accent: 0 85% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 240 10% 95%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 10% 20%;
-    --input: 240 10% 15%;
-    --ring: 217 91% 60%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 85% 55%;
   }
 }
 
@@ -175,12 +177,20 @@ All colors MUST be HSL.
 }
 
 /* Neon glow effects */
-.glow-blue {
-  box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.5);
+.glow-red {
+  box-shadow: 0 0 20px hsl(var(--neon-red) / 0.5);
 }
 
-.glow-purple {
-  box-shadow: 0 0 20px hsl(var(--neon-purple) / 0.5);
+.glow-dark-red {
+  box-shadow: 0 0 20px hsl(var(--dark-red) / 0.5);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(var(--neon-red)), hsl(var(--dark-red)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Particle background */

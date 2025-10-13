@@ -32,7 +32,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass py-4' : 'py-6'
+        isScrolled ? 'bg-background/95 backdrop-blur-lg border-b border-primary/20 shadow-[0_4px_20px_rgba(var(--primary-rgb),0.1)] py-4' : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6">
@@ -40,8 +40,9 @@ const Navbar = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection('home')}
-            className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:scale-105 transition-transform"
+            className="text-2xl sm:text-3xl font-bold gradient-text hover:opacity-80 transition-all hover:scale-105 flex items-center gap-2"
           >
+            <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-sm shadow-lg">Y</span>
             Ye.
           </button>
 
@@ -51,10 +52,10 @@ const Navbar = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover:text-primary transition-colors relative group"
+                className="text-foreground/70 hover:text-primary transition-all font-medium relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300" />
               </button>
             ))}
           </div>

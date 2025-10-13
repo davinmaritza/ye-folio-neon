@@ -83,7 +83,7 @@ const Skills = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-center">
-            Tech <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Stack</span>
+            Tech <span className="gradient-text">Stack</span>
           </h2>
           <p className="text-muted-foreground text-center mb-12 text-lg">
             Languages I work with daily

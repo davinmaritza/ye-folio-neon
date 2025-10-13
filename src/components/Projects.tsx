@@ -68,7 +68,7 @@ const Projects = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-center">
-            Featured <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Projects</span>
+            Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-muted-foreground text-center mb-12 text-lg">
             Some of my recent work
