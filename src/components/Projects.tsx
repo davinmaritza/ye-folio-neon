@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ExternalLink, Github, Server } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import arqonaraPreview from '@/assets/arqonara-preview.png';
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,19 +14,21 @@ const Projects = () => {
       tech: ['Web Hosting', 'Cloud Services', 'VPS'],
       gradient: 'from-blue-500 to-cyan-500',
       link: 'https://arqonara.com/',
-      icon: 'Server',
+      image: arqonaraPreview,
     },
     {
       title: 'Social Media Dashboard',
       description: 'Analytics dashboard for social media management with data visualization and automated reporting features.',
       tech: ['Python', 'JavaScript', 'PostgreSQL'],
       gradient: 'from-purple-500 to-pink-500',
+      image: null,
     },
     {
       title: 'Task Management System',
       description: 'Collaborative project management tool with real-time updates, team collaboration, and progress tracking.',
       tech: ['C#', 'TypeScript', 'MongoDB'],
       gradient: 'from-green-500 to-teal-500',
+      image: null,
     },
   ];
 
@@ -74,37 +77,46 @@ const Projects = () => {
                 <ProjectWrapper
                   key={index}
                   {...wrapperProps}
-                  className="glass rounded-2xl overflow-hidden group hover:-translate-y-2 hover:scale-105 transition-all duration-300 hover:shadow-2xl cursor-pointer block"
+                  className="glass rounded-2xl overflow-hidden group hover:-translate-y-4 hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_20px_60px_rgba(var(--primary-rgb),0.3)] cursor-pointer block"
                   style={{
                     animationDelay: `${index * 100}ms`,
                   }}
                 >
-                  {/* Project Image Placeholder with Gradient */}
-                  <div className={`h-48 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
-                    
-                    {/* Icon for projects with icon property */}
-                    {project.icon && (
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <Server size={40} className="text-white" />
+                  {/* Project Image/Thumbnail */}
+                  <div className={`h-56 ${project.image ? 'bg-background' : `bg-gradient-to-br ${project.gradient}`} relative overflow-hidden`}>
+                    {project.image ? (
+                      <>
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent group-hover:from-background/60 transition-colors duration-300" />
+                      </>
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <Server size={40} className="text-white" />
+                          </div>
                         </div>
-                      </div>
+                      </>
                     )}
                     
                     {/* Buttons for projects without link */}
                     {!project.link && (
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-sm">
                         <div className="flex gap-4">
                           <Button 
                             size="icon"
-                            className="rounded-full bg-white/90 hover:bg-white text-black"
+                            className="rounded-full bg-white/90 hover:bg-white text-black hover:scale-110 transition-transform"
                           >
                             <Github size={20} />
                           </Button>
                           <Button 
                             size="icon"
-                            className="rounded-full bg-white/90 hover:bg-white text-black"
+                            className="rounded-full bg-white/90 hover:bg-white text-black hover:scale-110 transition-transform"
                           >
                             <ExternalLink size={20} />
                           </Button>
@@ -114,9 +126,9 @@ const Projects = () => {
                     
                     {/* External link indicator for linked projects */}
                     {project.link && (
-                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center">
-                          <ExternalLink size={20} className="text-black" />
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
+                        <div className="w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                          <ExternalLink size={22} className="text-black" />
                         </div>
                       </div>
                     )}
