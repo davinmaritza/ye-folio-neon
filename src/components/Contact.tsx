@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { Github, Mail, MessageSquare } from 'lucide-react';
+import { Github, Mail, MessageSquare, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,6 +28,13 @@ const Contact = () => {
       link: 'mailto:alfarrezald@gmail.com',
       color: 'hover:text-primary',
       bgGradient: 'from-green-500 to-teal-500',
+    },
+    {
+      name: 'Instagram',
+      icon: Instagram,
+      link: 'https://instagram.com/davinmaritza',
+      color: 'hover:text-secondary',
+      bgGradient: 'from-purple-500 via-pink-500 to-orange-500',
     },
   ];
 
@@ -69,39 +77,53 @@ const Contact = () => {
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
             </p>
 
-            <div className="grid sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {contactMethods.map((method, index) => (
-                <a
+                <motion.a
                   key={method.name}
                   href={method.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group"
-                  style={{
-                    animationDelay: `${index * 100}ms`,
+                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                    ease: [0.25, 0.46, 0.45, 0.94]
                   }}
                 >
-                  <div className="glass rounded-xl p-6 flex flex-col items-center gap-4 hover:scale-105 transition-all duration-300 hover:shadow-2xl cursor-pointer">
-                    <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${method.bgGradient} flex items-center justify-center group-hover:shadow-lg transition-shadow duration-300`}>
+                  <div className="glass rounded-xl p-6 flex flex-col items-center gap-4 hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 cursor-pointer border border-white/5">
+                    <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${method.bgGradient} flex items-center justify-center group-hover:shadow-xl group-hover:shadow-primary/30 transition-all duration-300`}>
                       <method.icon className="w-8 h-8 text-white" />
                     </div>
                     <span className={`font-semibold text-lg transition-colors ${method.color}`}>
                       {method.name}
                     </span>
                   </div>
-                </a>
+                </motion.a>
               ))}
             </div>
 
-            <div className="mt-8 text-center">
+            <motion.div 
+              className="mt-8 text-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-primary/50"
+                asChild
+                className="bg-gradient-to-r from-primary via-secondary to-primary hover:opacity-90 transition-all duration-300 text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-primary/50 hover:scale-105"
               >
-                <Mail className="mr-2" size={20} />
-                Send Message
+                <a href="mailto:alfarrezald@gmail.com">
+                  <Mail className="mr-2" size={20} />
+                  Send Message
+                </a>
               </Button>
-            </div>
+            </motion.div>
           </div>
 
           <div className="text-center">
