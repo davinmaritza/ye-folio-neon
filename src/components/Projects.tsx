@@ -17,6 +17,14 @@ const Projects = () => {
       image: arqonaraPreview,
     },
     {
+      title: 'RPL1 Class Assistant',
+      description: 'Class management and learning assistant application for RPL1 course with automated features and student collaboration tools.',
+      tech: ['Python', 'Flask', 'SQLite'],
+      gradient: 'from-indigo-500 to-purple-500',
+      link: 'https://github.com/davinmaritza/rpl1-class-assistant',
+      image: null,
+    },
+    {
       title: 'Social Media Dashboard',
       description: 'Analytics dashboard for social media management with data visualization and automated reporting features.',
       tech: ['Python', 'JavaScript', 'PostgreSQL'],
