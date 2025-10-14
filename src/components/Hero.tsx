@@ -78,7 +78,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Hi, I'm <span className="gradient-text">Ye</span> 👋
+            Hi, I'm <span className="gradient-text">Davin</span> 👋
           </motion.h1>
           
           {/* Main Headline */}

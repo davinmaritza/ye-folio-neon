@@ -7,11 +7,36 @@ const LanguageChart = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   const languages = [
-    { name: 'C++', level: 92, color: 'from-[#ff003c] via-[#ff003c] to-[#9b00ff]', icon: '💻' },
-    { name: 'JavaScript', level: 90, color: 'from-[#ff003c] via-[#9b00ff] to-[#ff4f9c]', icon: '🌐' },
-    { name: 'C#', level: 80, color: 'from-[#9b00ff] via-[#ff4f9c] to-[#ff003c]', icon: '⚙️' },
-    { name: 'TypeScript', level: 77, color: 'from-[#ff4f9c] via-[#9b00ff] to-[#ff003c]', icon: '📘' },
-    { name: 'Python', level: 69, color: 'from-[#9b00ff] via-[#ff003c] to-[#ff4f9c]', icon: '🐍' },
+    { 
+      name: 'C++', 
+      level: 92, 
+      color: 'from-[#ff003c] via-[#ff003c] to-[#9b00ff]', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg'
+    },
+    { 
+      name: 'JavaScript', 
+      level: 90, 
+      color: 'from-[#ff003c] via-[#9b00ff] to-[#ff4f9c]', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+    },
+    { 
+      name: 'C#', 
+      level: 80, 
+      color: 'from-[#9b00ff] via-[#ff4f9c] to-[#ff003c]', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg'
+    },
+    { 
+      name: 'TypeScript', 
+      level: 77, 
+      color: 'from-[#ff4f9c] via-[#9b00ff] to-[#ff003c]', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+    },
+    { 
+      name: 'Python', 
+      level: 69, 
+      color: 'from-[#9b00ff] via-[#ff003c] to-[#ff4f9c]', 
+      logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'
+    },
   ];
 
   useEffect(() => {
@@ -64,7 +89,7 @@ const LanguageChart = () => {
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <span className="text-3xl">{lang.icon}</span>
+                    <img src={lang.logo} alt={`${lang.name} logo`} className="w-12 h-12" />
                     <div>
                       <h3 className="text-xl font-bold text-foreground">
                         {lang.name}
@@ -157,9 +182,9 @@ const LanguageChart = () => {
                         </linearGradient>
                       </defs>
                     </svg>
-                    {/* Center text */}
+                    {/* Center logo */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-2xl">{lang.icon}</span>
+                      <img src={lang.logo} alt={`${lang.name} logo`} className="w-10 h-10" />
                     </div>
                   </div>
                   <div className="text-center">

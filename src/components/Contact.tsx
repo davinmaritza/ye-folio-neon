@@ -118,8 +118,8 @@ const Contact = () => {
                 asChild
                 className="bg-gradient-to-r from-primary via-secondary to-primary hover:opacity-90 transition-all duration-300 text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-primary/50 hover:scale-105"
               >
-                <a href="mailto:alfarrezald@gmail.com">
-                  <Mail className="mr-2" size={20} />
+                <a href="https://instagram.com/davinmaritza" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="mr-2" size={20} />
                   Send Message
                 </a>
               </Button>
