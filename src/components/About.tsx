@@ -37,12 +37,12 @@ const About = () => {
           
           <div className="glass rounded-2xl p-8 sm:p-12 hover:shadow-[0_0_40px_rgba(var(--primary-rgb),0.15)] transition-all duration-300">
             <p className="text-lg sm:text-xl text-foreground/90 leading-relaxed mb-6">
-              Hey there! I'm <span className="text-primary font-bold">Ye</span>, a passionate 16-year-old developer from Bandung, Indonesia. 
-              I discovered my love for coding at a young age and haven't looked back since.
+              Hey there! I'm <span className="text-primary font-bold">Davin Maritza Alfarrezal</span>, also known as <span className="text-primary font-bold">Ye</span>. 
+              I'm a passionate 16-year-old student at <span className="text-primary font-semibold">SMK Negeri 13 Bandung</span>, with a deep interest in both <span className="text-primary font-semibold">law</span> and <span className="text-primary font-semibold">computers</span>.
             </p>
             <p className="text-lg sm:text-xl text-foreground/90 leading-relaxed mb-6">
               My journey in tech has been driven by <span className="text-primary font-semibold">curiosity</span> and a desire to build things that matter. 
-              I specialize in <span className="text-primary font-semibold">fullstack web development</span>, creating beautiful and functional applications that solve real-world problems.
+              I specialize in <span className="text-primary font-semibold">fullstack web development</span>, creating beautiful and functional applications that solve real-world problems, while exploring the intersection of technology and legal systems.
             </p>
             <p className="text-lg sm:text-xl text-foreground/90 leading-relaxed mb-8">
               When I'm not coding, you'll find me exploring new technologies, learning frameworks, and constantly 
