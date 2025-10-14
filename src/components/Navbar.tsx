@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logoGif from '@/assets/logo.gif';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +43,9 @@ const Navbar = () => {
             onClick={() => scrollToSection('home')}
             className="text-2xl sm:text-3xl font-bold gradient-text hover:opacity-80 transition-all hover:scale-105 flex items-center gap-2"
           >
-            <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-sm shadow-lg">Y</span>
+            <div className="w-10 h-10 rounded-full overflow-hidden shadow-[0_0_20px_rgba(255,0,60,0.5)]">
+              <img src={logoGif} alt="Logo" className="w-full h-full object-cover" />
+            </div>
             Ye.
           </button>
 

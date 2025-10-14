@@ -7,11 +7,11 @@ const LanguageChart = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   const languages = [
-    { name: 'C++', level: 95, color: 'from-red-500 to-red-600', icon: '💻' },
-    { name: 'C#', level: 90, color: 'from-red-600 to-red-700', icon: '⚙️' },
-    { name: 'JavaScript', level: 85, color: 'from-red-700 to-red-800', icon: '🌐' },
-    { name: 'TypeScript', level: 85, color: 'from-red-800 to-red-900', icon: '📘' },
-    { name: 'Python', level: 75, color: 'from-red-900 to-black', icon: '🐍' },
+    { name: 'C++', level: 92, color: 'from-[#ff003c] via-[#ff003c] to-[#9b00ff]', icon: '💻' },
+    { name: 'JavaScript', level: 90, color: 'from-[#ff003c] via-[#9b00ff] to-[#ff4f9c]', icon: '🌐' },
+    { name: 'C#', level: 80, color: 'from-[#9b00ff] via-[#ff4f9c] to-[#ff003c]', icon: '⚙️' },
+    { name: 'TypeScript', level: 77, color: 'from-[#ff4f9c] via-[#9b00ff] to-[#ff003c]', icon: '📘' },
+    { name: 'Python', level: 69, color: 'from-[#9b00ff] via-[#ff003c] to-[#ff4f9c]', icon: '🐍' },
   ];
 
   useEffect(() => {
@@ -151,8 +151,9 @@ const LanguageChart = () => {
                       />
                       <defs>
                         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="hsl(var(--neon-red))" />
-                          <stop offset="100%" stopColor="hsl(var(--darker-red))" />
+                          <stop offset="0%" stopColor="#ff003c" />
+                          <stop offset="50%" stopColor="#9b00ff" />
+                          <stop offset="100%" stopColor="#ff4f9c" />
                         </linearGradient>
                       </defs>
                     </svg>

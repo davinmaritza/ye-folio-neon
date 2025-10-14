@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 5%;
+    --background: 0 0% 5.1%;
     --foreground: 0 0% 95%;
 
     --card: 0 0% 8%;
@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 0 85% 55%;
+    --primary: 350 100% 62%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 70% 45%;
+    --secondary: 280 100% 62%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 0 85% 55%;
+    --accent: 330 100% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,19 +34,20 @@ All colors MUST be HSL.
 
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 0 85% 55%;
+    --ring: 350 100% 62%;
 
     --radius: 0.75rem;
     
-    /* Custom colors - Dark Red & Black theme */
-    --neon-red: 0 85% 55%;
-    --dark-red: 0 70% 45%;
-    --darker-red: 0 60% 35%;
+    /* Custom colors - Neon Red-Purple-Pink theme */
+    --neon-red: 350 100% 62%;
+    --neon-purple: 280 100% 62%;
+    --neon-pink: 330 100% 65%;
     --dark-bg: 0 0% 5%;
     --dark-surface: 0 0% 8%;
-    --glow-red: 0 85% 55%;
-    --glow-dark-red: 0 70% 45%;
-    --primary-rgb: 222, 51, 51;
+    --glow-red: 350 100% 62%;
+    --glow-purple: 280 100% 62%;
+    --glow-pink: 330 100% 65%;
+    --primary-rgb: 255, 0, 60;
 
     --sidebar-background: 0 0% 98%;
 
@@ -66,7 +67,7 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 0 0% 5%;
+    --background: 0 0% 5.1%;
     --foreground: 0 0% 95%;
 
     --card: 0 0% 8%;
@@ -75,16 +76,16 @@ All colors MUST be HSL.
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 0 85% 55%;
+    --primary: 350 100% 62%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 70% 45%;
+    --secondary: 280 100% 62%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 0 85% 55%;
+    --accent: 330 100% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
@@ -92,7 +93,7 @@ All colors MUST be HSL.
 
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 0 85% 55%;
+    --ring: 350 100% 62%;
   }
 }
 
@@ -187,7 +188,7 @@ All colors MUST be HSL.
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, hsl(var(--neon-red)), hsl(var(--dark-red)));
+  background: linear-gradient(135deg, hsl(var(--neon-red)), hsl(var(--neon-purple)), hsl(var(--neon-pink)));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
