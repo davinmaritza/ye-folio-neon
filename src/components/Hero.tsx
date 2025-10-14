@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import logoGif from '@/assets/logo.gif';
+import pfpImage from '@/assets/pfp.png';
 
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
@@ -67,7 +67,7 @@ const Hero = () => {
           >
             <div className="glass rounded-full p-2 animate-float">
               <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-[0_0_60px_rgba(255,0,60,0.8)]">
-                <img src={logoGif} alt="Logo" className="w-full h-full object-cover" />
+                <img src={pfpImage} alt="Profile" className="w-full h-full object-cover" />
               </div>
             </div>
           </motion.div>
