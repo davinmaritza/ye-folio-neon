@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { MessageCircle, DollarSign, Code, CheckCircle, Figma, FileCode, Palette, Smartphone, Repeat, Database, Sparkles, Package, Layers, Component, Zap, Triangle, Navigation, Instagram } from 'lucide-react';
+import { MessageCircle, DollarSign, Code, CheckCircle, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const ProjectAssistance = () => {
@@ -32,7 +32,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Simple Landing Page", "Basic Responsive Design"],
       time: "1-2 Days",
-      icons: [Figma],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"],
       gradient: "from-purple-500/10 to-pink-500/10",
       glow: "shadow-[0_0_20px_rgba(168,85,247,0.4)]"
     },
@@ -42,7 +42,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Modern Landing Page", "Responsive Design", "Premium Styling"],
       time: "1-2 Days",
-      icons: [Figma, Sparkles],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"],
       gradient: "from-pink-500/10 to-purple-500/10",
       glow: "shadow-[0_0_20px_rgba(236,72,153,0.4)]"
     },
@@ -52,7 +52,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Modern Landing Page", "Figma to Code", "Responsive Design"],
       time: "1-2 Days",
-      icons: [Figma, Repeat, FileCode],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"],
       gradient: "from-blue-500/10 to-purple-500/10",
       glow: "shadow-[0_0_20px_rgba(59,130,246,0.4)]"
     },
@@ -62,7 +62,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Modern Landing Page", "For Flutter", "Responsive Design"],
       time: "1-2 Days",
-      icons: [Figma, Smartphone],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"],
       gradient: "from-cyan-500/10 to-blue-500/10",
       glow: "shadow-[0_0_20px_rgba(6,182,212,0.4)]"
     },
@@ -72,7 +72,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Simple Landing Page", "Standard Convert Type"],
       time: "1 Day",
-      icons: [FileCode, Code],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"],
       gradient: "from-yellow-500/10 to-orange-500/10",
       glow: "shadow-[0_0_20px_rgba(234,179,8,0.4)]"
     },
@@ -82,7 +82,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Modern Landing Page", "Support Convert Type", "Premium Styling"],
       time: "1-2 Days",
-      icons: [FileCode, Palette, Figma],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"],
       gradient: "from-orange-500/10 to-red-500/10",
       glow: "shadow-[0_0_20px_rgba(249,115,22,0.4)]"
     },
@@ -92,7 +92,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Dynamic Landing Page", "Database MySQL | PHP Native", "Advanced Design"],
       time: "2-3 Days",
-      icons: [FileCode, Database, Code],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"],
       gradient: "from-red-500/10 to-pink-500/10",
       glow: "shadow-[0_0_20px_rgba(239,68,68,0.4)]"
     },
@@ -102,7 +102,7 @@ const ProjectAssistance = () => {
       unit: "/ Paket",
       features: ["Logic Python", "Algorithm Design"],
       time: "1 Day",
-      icons: [Code],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"],
       gradient: "from-green-500/10 to-emerald-500/10",
       glow: "shadow-[0_0_20px_rgba(34,197,94,0.4)]"
     },
@@ -112,7 +112,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Simple Landing Page", "Basic Responsive Design"],
       time: "1 Day",
-      icons: [Package, Code],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"],
       gradient: "from-emerald-500/10 to-teal-500/10",
       glow: "shadow-[0_0_20px_rgba(16,185,129,0.4)]"
     },
@@ -122,7 +122,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Complete Landing Page", "Basic Responsive Design", "Advanced Design"],
       time: "1 Day",
-      icons: [Package, Code, Zap],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"],
       gradient: "from-teal-500/10 to-cyan-500/10",
       glow: "shadow-[0_0_20px_rgba(20,184,166,0.4)]"
     },
@@ -132,7 +132,7 @@ const ProjectAssistance = () => {
       unit: "/ Route",
       features: ["API Python", "Backend Development"],
       time: "1-2 Days",
-      icons: [Code, Database],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"],
       gradient: "from-cyan-500/10 to-blue-500/10",
       glow: "shadow-[0_0_20px_rgba(6,182,212,0.4)]"
     },
@@ -142,7 +142,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Dynamic Landing Page", "Basic Responsive Design"],
       time: "1-2 Days",
-      icons: [Component, Package],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"],
       gradient: "from-blue-500/10 to-indigo-500/10",
       glow: "shadow-[0_0_20px_rgba(59,130,246,0.4)]"
     },
@@ -152,7 +152,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Dynamic Landing Page", "Expert Design"],
       time: "1-2 Days",
-      icons: [Component, Layers],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"],
       gradient: "from-indigo-500/10 to-purple-500/10",
       glow: "shadow-[0_0_20px_rgba(99,102,241,0.4)]"
     },
@@ -162,7 +162,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Basic Responsive Design", "Dynamic Design"],
       time: "1-2 Days",
-      icons: [Component],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"],
       gradient: "from-purple-500/10 to-violet-500/10",
       glow: "shadow-[0_0_20px_rgba(168,85,247,0.4)]"
     },
@@ -172,7 +172,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Basic Responsive Design", "Dynamic Design"],
       time: "1-2 Days",
-      icons: [Triangle, Zap],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"],
       gradient: "from-violet-500/10 to-fuchsia-500/10",
       glow: "shadow-[0_0_20px_rgba(139,92,246,0.4)]"
     },
@@ -182,7 +182,7 @@ const ProjectAssistance = () => {
       unit: "/ Route",
       features: ["Specialist API", "Backend Development"],
       time: "1-2 Days",
-      icons: [Navigation, Database],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"],
       gradient: "from-fuchsia-500/10 to-pink-500/10",
       glow: "shadow-[0_0_20px_rgba(217,70,239,0.4)]"
     },
@@ -192,7 +192,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Dynamic Landing Page", "Basic Responsive Design"],
       time: "1-2 Days",
-      icons: [Smartphone, Code],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"],
       gradient: "from-sky-500/10 to-blue-500/10",
       glow: "shadow-[0_0_20px_rgba(14,165,233,0.4)]"
     },
@@ -202,7 +202,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Dynamic Landing Page", "Expert Design"],
       time: "1-2 Days",
-      icons: [Smartphone, Sparkles],
+      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"],
       gradient: "from-blue-500/10 to-indigo-500/10",
       glow: "shadow-[0_0_20px_rgba(59,130,246,0.4)]"
     },
@@ -308,13 +308,13 @@ const ProjectAssistance = () => {
                   className={`glass p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 h-full group hover:${service.glow}`}
                 >
                   {/* Tech Icons */}
-                  <div className="flex gap-2 mb-4">
-                    {service.icons.map((Icon, i) => (
+                  <div className="flex gap-2 mb-4 flex-wrap">
+                    {service.icons.map((iconUrl, i) => (
                       <div 
                         key={i} 
-                        className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"
+                        className="w-8 h-8 flex items-center justify-center rounded-lg bg-card/50 p-1.5 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all"
                       >
-                        <Icon className="w-5 h-5 text-primary" />
+                        <img src={iconUrl} alt="Tech icon" className="w-full h-full object-contain" />
                       </div>
                     ))}
                   </div>
