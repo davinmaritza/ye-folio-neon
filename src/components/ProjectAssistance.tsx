@@ -260,7 +260,7 @@ const ProjectAssistance = () => {
             Project Assistance
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
-            ChasoulUIX is here to help you finish various academic and freelance projects with top-quality results at an affordable price. From simple assignments to thesis-level systems — we make your project journey smooth and stress-free.
+            Davin is here to help you finish various academic and freelance projects with top-quality results at an affordable price. From simple assignments to thesis-level systems — we make your project journey smooth and stress-free.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button 
