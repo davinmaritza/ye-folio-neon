@@ -1,9 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { MessageCircle, DollarSign, Code, CheckCircle, Instagram } from 'lucide-react';
+import { MessageCircle, DollarSign, Code, CheckCircle, Instagram, Figma, Smartphone, Globe, Wrench, Gamepad2, FileCode, Boxes, Database, Cloud, Cog } from 'lucide-react';
 
 const ProjectAssistance = () => {
-
   const services = [
     {
       title: "Basic UI/UX",
@@ -11,7 +10,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Simple Landing Page", "Basic Responsive Design"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"],
+      Icon: Figma,
       gradient: "from-purple-500/10 to-pink-500/10"
     },
     {
@@ -20,7 +19,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Modern Landing Page", "Responsive Design", "Premium Styling"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"],
+      Icon: Figma,
       gradient: "from-pink-500/10 to-purple-500/10"
     },
     {
@@ -29,7 +28,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Modern Landing Page", "Figma to Code", "Responsive Design"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"],
+      Icon: Globe,
       gradient: "from-blue-500/10 to-purple-500/10"
     },
     {
@@ -38,7 +37,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Modern Landing Page", "For Flutter", "Responsive Design"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"],
+      Icon: Smartphone,
       gradient: "from-cyan-500/10 to-blue-500/10"
     },
     {
@@ -47,7 +46,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Simple Landing Page", "Standard Convert Type"],
       time: "1 Day",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"],
+      Icon: FileCode,
       gradient: "from-yellow-500/10 to-orange-500/10"
     },
     {
@@ -56,7 +55,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Modern Landing Page", "Support Convert Type", "Premium Styling"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"],
+      Icon: Wrench,
       gradient: "from-orange-500/10 to-red-500/10"
     },
     {
@@ -65,7 +64,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Dynamic Landing Page", "Database MySQL | PHP Native", "Advanced Design"],
       time: "2-3 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"],
+      Icon: Database,
       gradient: "from-red-500/10 to-pink-500/10"
     },
     {
@@ -74,7 +73,7 @@ const ProjectAssistance = () => {
       unit: "/ Paket",
       features: ["Logic Python", "Algorithm Design"],
       time: "1 Day",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"],
+      Icon: Code,
       gradient: "from-green-500/10 to-emerald-500/10"
     },
     {
@@ -83,7 +82,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Simple Landing Page", "Basic Responsive Design"],
       time: "1 Day",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"],
+      Icon: Cloud,
       gradient: "from-emerald-500/10 to-teal-500/10"
     },
     {
@@ -92,7 +91,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Complete Landing Page", "Basic Responsive Design", "Advanced Design"],
       time: "1 Day",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"],
+      Icon: Cloud,
       gradient: "from-teal-500/10 to-cyan-500/10"
     },
     {
@@ -101,7 +100,7 @@ const ProjectAssistance = () => {
       unit: "/ Route",
       features: ["API Python", "Backend Development"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"],
+      Icon: Cog,
       gradient: "from-cyan-500/10 to-blue-500/10"
     },
     {
@@ -110,7 +109,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Dynamic Landing Page", "Basic Responsive Design"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"],
+      Icon: Boxes,
       gradient: "from-blue-500/10 to-indigo-500/10"
     },
     {
@@ -119,7 +118,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Dynamic Landing Page", "Expert Design"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"],
+      Icon: Boxes,
       gradient: "from-indigo-500/10 to-purple-500/10"
     },
     {
@@ -128,7 +127,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Basic Responsive Design", "Dynamic Design"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"],
+      Icon: Gamepad2,
       gradient: "from-purple-500/10 to-violet-500/10"
     },
     {
@@ -137,7 +136,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Basic Responsive Design", "Dynamic Design"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"],
+      Icon: Gamepad2,
       gradient: "from-violet-500/10 to-fuchsia-500/10"
     },
     {
@@ -146,7 +145,7 @@ const ProjectAssistance = () => {
       unit: "/ Route",
       features: ["Specialist API", "Backend Development"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"],
+      Icon: Cog,
       gradient: "from-fuchsia-500/10 to-pink-500/10"
     },
     {
@@ -155,7 +154,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Dynamic Landing Page", "Basic Responsive Design"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"],
+      Icon: Smartphone,
       gradient: "from-sky-500/10 to-blue-500/10"
     },
     {
@@ -164,7 +163,7 @@ const ProjectAssistance = () => {
       unit: "/ page",
       features: ["Dynamic Landing Page", "Expert Design"],
       time: "1-2 Days",
-      icons: ["https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"],
+      Icon: Smartphone,
       gradient: "from-blue-500/10 to-indigo-500/10"
     },
   ];
@@ -206,7 +205,7 @@ const ProjectAssistance = () => {
       
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Overview Section */}
-        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+        <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 gradient-text">
             Project Assistance
           </h2>
@@ -243,55 +242,48 @@ const ProjectAssistance = () => {
         <div className="mb-16 md:mb-20">
           <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-12 gradient-text">Service Packages</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-            {services.map((service, index) => (
-              <Card 
-                key={index}
-                className="glass p-5 sm:p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 h-full group"
-              >
-                {/* Tech Icons */}
-                <div className="flex gap-2 mb-4 flex-wrap">
-                  {service.icons.map((iconUrl, i) => (
-                    <div 
-                      key={i} 
-                      className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-lg bg-card/50 p-1.5 opacity-80 group-hover:opacity-100 transition-opacity"
-                    >
-                      <img 
-                        src={iconUrl} 
-                        alt="Tech icon" 
-                        className="w-full h-full object-contain"
-                        loading="lazy"
-                      />
+            {services.map((service, index) => {
+              const Icon = service.Icon;
+              return (
+                <Card 
+                  key={index}
+                  className="glass p-5 sm:p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 h-full group"
+                >
+                  {/* Icon */}
+                  <div className="flex gap-2 mb-4">
+                    <div className={`w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-br ${service.gradient} border border-primary/20`}>
+                      <Icon className="w-5 h-5 text-primary" />
                     </div>
-                  ))}
-                </div>
-                
-                {/* Title */}
-                <h4 className="text-lg sm:text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
-                  {service.title}
-                </h4>
-                
-                {/* Price */}
-                <div className="mb-4">
-                  <span className="text-2xl sm:text-3xl font-bold text-primary">{service.price}</span>
-                  <span className="text-muted-foreground ml-1 text-sm sm:text-base">{service.unit}</span>
-                </div>
-                
-                {/* Features */}
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
-                      <span className="text-primary mt-1">✓</span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                {/* Time */}
-                <div className="text-xs text-muted-foreground pt-4 border-t border-border/30">
-                  Development time: {service.time}
-                </div>
-              </Card>
-            ))}
+                  </div>
+                  
+                  {/* Title */}
+                  <h4 className="text-lg sm:text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h4>
+                  
+                  {/* Price */}
+                  <div className="mb-4">
+                    <span className="text-2xl sm:text-3xl font-bold text-primary">{service.price}</span>
+                    <span className="text-muted-foreground ml-1 text-sm sm:text-base">{service.unit}</span>
+                  </div>
+                  
+                  {/* Features */}
+                  <ul className="space-y-2 mb-4">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-muted-foreground">
+                        <span className="text-primary mt-1">✓</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  {/* Time */}
+                  <div className="text-xs text-muted-foreground pt-4 border-t border-border/30">
+                    Development time: {service.time}
+                  </div>
+                </Card>
+              );
+            })}
           </div>
         </div>
 
