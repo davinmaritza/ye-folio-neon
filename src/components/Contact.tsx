@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Github, Mail, MessageSquare, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -72,58 +71,47 @@ const Contact = () => {
             Let's connect and build something amazing together
           </p>
           
-          <div className="glass rounded-2xl p-8 sm:p-12 mb-8">
-            <p className="text-center text-lg sm:text-xl text-foreground/90 mb-8">
+          <div className="glass rounded-2xl p-6 sm:p-8 md:p-12 mb-8 border border-border/50">
+            <p className="text-center text-base sm:text-lg md:text-xl text-foreground/90 mb-6 sm:mb-8">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {contactMethods.map((method, index) => (
-                <motion.a
+                <a
                   key={method.name}
                   href={method.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group"
-                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.1,
-                    ease: [0.25, 0.46, 0.45, 0.94]
-                  }}
+                  className={`group transition-all duration-500 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <div className="glass rounded-xl p-6 flex flex-col items-center gap-4 hover:scale-110 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 cursor-pointer border border-white/5">
-                    <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${method.bgGradient} flex items-center justify-center group-hover:shadow-xl group-hover:shadow-primary/30 transition-all duration-300`}>
-                      <method.icon className="w-8 h-8 text-white" />
+                  <div className="glass rounded-xl p-4 sm:p-6 flex flex-col items-center gap-3 sm:gap-4 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 cursor-pointer border border-border/30">
+                    <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br ${method.bgGradient} flex items-center justify-center transition-all duration-300`}>
+                      <method.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <span className={`font-semibold text-lg transition-colors ${method.color}`}>
+                    <span className={`font-semibold text-sm sm:text-base transition-colors ${method.color}`}>
                       {method.name}
                     </span>
                   </div>
-                </motion.a>
+                </a>
               ))}
             </div>
 
-            <motion.div 
-              className="mt-8 text-center"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
+            <div className="mt-6 sm:mt-8 text-center">
               <Button 
                 size="lg"
                 asChild
-                className="bg-gradient-to-r from-primary via-secondary to-primary hover:opacity-90 transition-all duration-300 text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-primary/50 hover:scale-105"
+                className="bg-gradient-to-r from-primary via-secondary to-primary hover:opacity-90 transition-all duration-300 text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 rounded-full shadow-lg hover:shadow-primary/30 hover:scale-105"
               >
                 <a href="https://instagram.com/davinmaritza" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="mr-2" size={20} />
+                  <Instagram className="mr-2" size={18} />
                   Send Message
                 </a>
               </Button>
-            </motion.div>
+            </div>
           </div>
 
           <div className="text-center">

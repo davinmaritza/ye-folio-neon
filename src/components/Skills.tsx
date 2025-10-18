@@ -89,66 +89,64 @@ const Skills = () => {
             Languages I work with daily
           </p>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {skills.map((skill, index) => (
               <div
                 key={skill.name}
-                className="glass rounded-xl p-6 flex flex-col items-center justify-center gap-4 group hover:scale-110 hover:-translate-y-2 transition-all duration-300 hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] cursor-pointer relative overflow-hidden"
+                className="glass rounded-2xl p-4 sm:p-6 flex flex-col items-center justify-center gap-3 sm:gap-4 group hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden border border-border/50"
                 style={{
                   animationDelay: `${index * 100}ms`,
                 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-10 transition-opacity duration-300" 
-                     style={{ background: `linear-gradient(135deg, var(--primary), var(--secondary))` }} 
-                />
-                <div className={`w-20 h-20 rounded-2xl ${skill.bgColor} backdrop-blur-sm flex items-center justify-center p-3 group-hover:scale-110 transition-all duration-300 relative z-10`}>
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-card/50 backdrop-blur-sm flex items-center justify-center p-2 sm:p-3 group-hover:scale-110 transition-all duration-300 relative z-10 border border-primary/20">
                   <img 
                     src={skill.logo} 
                     alt={`${skill.name} logo`}
                     className="w-full h-full object-contain"
+                    loading="lazy"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
                   />
                 </div>
-                <p className="font-semibold text-lg group-hover:text-primary transition-colors relative z-10">
+                <p className="font-semibold text-sm sm:text-base group-hover:text-primary transition-colors relative z-10">
                   {skill.name}
                 </p>
-                <div className="w-full h-1 bg-muted rounded-full overflow-hidden relative z-10">
+                <div className="w-full h-1 bg-border/30 rounded-full overflow-hidden relative z-10">
                   <div 
-                    className={`h-full bg-gradient-to-r ${skill.color} transform origin-left transition-transform duration-500 group-hover:scale-x-100 scale-x-75`}
+                    className={`h-full bg-gradient-to-r ${skill.color} transform origin-left transition-transform duration-300 scale-x-75 group-hover:scale-x-100`}
                   />
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <p className="text-foreground/70 mb-6">Primary Focus</p>
-            <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+          <div className="mt-12 sm:mt-16 text-center">
+            <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">Primary Focus</p>
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-3xl mx-auto px-4">
               {roles.map((role, index) => {
                 const RoleIcon = role.icon;
                 const isActive = index === currentRoleIndex;
                 return (
                   <div
                     key={role.label}
-                    className={`inline-flex items-center gap-2 glass rounded-full px-6 py-3 transition-all duration-500 ${
+                    className={`inline-flex items-center gap-2 glass rounded-full px-4 sm:px-6 py-2 sm:py-3 transition-all duration-500 border ${
                       isActive 
-                        ? 'scale-110 shadow-[0_0_30px_rgba(var(--primary-rgb),0.4)] ring-2 ring-primary/50' 
-                        : 'scale-100 opacity-70 hover:opacity-100 hover:scale-105'
+                        ? 'scale-105 sm:scale-110 border-primary/50 shadow-lg shadow-primary/20' 
+                        : 'scale-100 opacity-70 hover:opacity-100 hover:scale-105 border-border/30'
                     }`}
                   >
                     <RoleIcon 
                       className={`transition-all duration-500 ${
-                        isActive ? 'text-primary' : 'text-foreground/60'
+                        isActive ? 'text-primary' : 'text-muted-foreground'
                       }`} 
-                      size={20} 
+                      size={18} 
                     />
                     <span 
                       className={`font-semibold transition-all duration-500 ${
                         isActive 
-                          ? `text-lg bg-gradient-to-r ${role.color} bg-clip-text text-transparent`
-                          : 'text-sm text-foreground/60'
+                          ? `text-base sm:text-lg bg-gradient-to-r ${role.color} bg-clip-text text-transparent`
+                          : 'text-xs sm:text-sm text-muted-foreground'
                       }`}
                     >
                       {role.label}

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
 import { Heart, Mail, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -25,67 +24,55 @@ const Footer = () => {
   }, []);
 
   return (
-    <motion.footer 
+    <footer 
       ref={footerRef}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6 }}
-      className="relative py-12 border-t border-border/30"
+      className={`relative py-8 sm:py-12 border-t border-border/30 transition-all duration-700 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+      }`}
     >
-      {/* Gradient Line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
       
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex flex-col items-center gap-6">
-          {/* Contact Links */}
-          <div className="flex items-center gap-6">
-            <motion.a
+        <div className="flex flex-col items-center gap-4 sm:gap-6">
+          <div className="flex items-center gap-4 sm:gap-6">
+            <a
               href="mailto:alfarrezald@gmail.com"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors group"
+              className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-all duration-300 hover:scale-110 group"
             >
-              <Mail className="w-5 h-5 group-hover:animate-pulse" />
-              <span className="text-sm hidden sm:inline">alfarrezald@gmail.com</span>
-            </motion.a>
+              <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-xs sm:text-sm hidden sm:inline">alfarrezald@gmail.com</span>
+            </a>
             
-            <motion.a
+            <a
               href="https://instagram.com/davinmaritza"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 text-foreground/70 hover:text-secondary transition-colors group"
+              className="flex items-center gap-2 text-foreground/70 hover:text-secondary transition-all duration-300 hover:scale-110 group"
             >
-              <Instagram className="w-5 h-5 group-hover:animate-pulse" />
-              <span className="text-sm hidden sm:inline">@davinmaritza</span>
-            </motion.a>
+              <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-xs sm:text-sm hidden sm:inline">@davinmaritza</span>
+            </a>
           </div>
 
-          {/* Built with love */}
-          <div className="flex items-center gap-2 text-foreground/70">
+          <div className="flex items-center gap-2 text-foreground/70 text-sm">
             <span>Built with</span>
-            <Heart className="text-primary fill-primary animate-pulse" size={16} />
+            <Heart className="text-primary fill-primary" size={14} />
             <span>by Ye</span>
           </div>
           
-          {/* Copyright */}
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             © {currentYear} Ye — All Rights Reserved
           </p>
 
-          {/* Back to top */}
-          <motion.button
+          <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1 glass px-4 py-2 rounded-full"
+            className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-105 flex items-center gap-1 glass px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-border/30"
           >
             Back to top ↑
-          </motion.button>
+          </button>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
 import { Award } from 'lucide-react';
 
 const Achievements = () => {
@@ -51,37 +50,32 @@ const Achievements = () => {
       className="py-20 sm:py-32 relative"
     >
       <div className="container mx-auto px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className={`text-center mb-12 sm:mb-16 transition-all duration-700 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Award className="w-8 h-8 text-primary" />
-            <h2 className="text-4xl sm:text-5xl font-bold">
+            <Award className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
               <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Achievements
               </span>
             </h2>
           </div>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
             Milestones and recognitions throughout my journey
           </p>
-          {/* Top PDF button removed per request (certificates shown as images on cards) */}
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {achievements.map((achievement, index) => (
-            <motion.div
+            <div
               key={achievement.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="group"
+              className={`group transition-all duration-500 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="glass rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300">
+              <div className="glass rounded-2xl overflow-hidden hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 border border-border/50 hover:scale-105 hover:-translate-y-1">
                 {/* Image Container (clickable -> opens PDF) */}
                 <a
                   href={`/prestasi${achievement.id}.pdf`}
@@ -90,36 +84,33 @@ const Achievements = () => {
                   title={`Open certificate ${achievement.id} (PDF)`}
                   className="block"
                 >
-                  <div className="relative h-64 bg-muted overflow-hidden cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 group-hover:opacity-0 transition-opacity duration-300" />
+                  <div className="relative h-48 sm:h-64 bg-muted overflow-hidden cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 group-hover:opacity-0 transition-opacity duration-300" />
                     <img
                       src={achievement.image.replace('.jpg', '.svg')}
                       alt={achievement.title}
                       loading="lazy"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         // Fallback if image doesn't exist
                         e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23262626" width="400" height="300"/%3E%3Ctext fill="%234a9eff" font-family="sans-serif" font-size="24" text-anchor="middle" x="200" y="150"%3EAchievement %23' + achievement.id + '%3C/text%3E%3C/svg%3E';
                       }}
                     />
 
-                    {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </a>
 
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-base sm:text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors line-clamp-2">
                     {achievement.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground text-xs sm:text-sm line-clamp-2">
                     {achievement.description}
                   </p>
-                  {/* PDF buttons removed — certificates are shown as images on the cards */}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
